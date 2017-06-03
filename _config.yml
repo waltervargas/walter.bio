@@ -9,4 +9,5 @@ url: "http://walter.bio"
 social:
   twitter: https://twitter.com/walterbio
   instagram: https://www.instagram.com/waltervargas/
-markdown: redcarpet
+markdown: kramdown
+exclude: ['README.md']
