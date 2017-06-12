@@ -9,6 +9,8 @@ url: "http://walter.bio"
 social:
   twitter: https://twitter.com/walterbio
   instagram: https://www.instagram.com/waltervargas/
+disqus:
+  shortname: walterbio
 markdown: kramdown
 theme: minima
 gems:
