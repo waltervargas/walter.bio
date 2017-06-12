@@ -1,12 +1,18 @@
-title: Walter Vargas
+title: walter.bio
+email: waltervargas@gmail.com
 description: |
   Walter Vargas is a Cloud Engineer with more than 15 years of experience
   working as a consultant, developer and leader.
 owner: Walter Vargas
-email: waltervargas@linux.com
 baseurl: ""
 url: "http://walter.bio"
 social:
   twitter: https://twitter.com/walterbio
   instagram: https://www.instagram.com/waltervargas/
 markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
