@@ -8,3 +8,5 @@
     curl -v -X POST "http://admin:$API_TOKEN@127.0.0.1:8080/job/seed-job/buildWithParameters?GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)"
   description: Jenkins run seed-job and pass the current git branch name as parameter
   tags: jenkins devops
+
+

@@ -3,6 +3,16 @@ layout: default
 ---
 
 <div class="home">
+  <h1 class="page-heading">Gists</h1>
+  <ul class="post-list">
+    {% for gi in site.data.gists %}
+      <li>
+        <span class="post-meta">{{ gi.description }}</span>
+        {% gist gi.gist %}
+      </li>
+    {% endfor %}
+  </ul>
+
   <h1 class="page-heading">Commands</h1>
   <ul class="post-list">
     {% for command in site.data.commands %}

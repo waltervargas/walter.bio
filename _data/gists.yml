@@ -1,0 +1,16 @@
+---
+
+- name: ecr_image_commit_id_check.sh
+  gist: waltervargas/46e312c3809805409acda5596b9341b8
+  body: |
+    NAME=dockercoins
+    IMAGES=$(aws --region ${REGION} ecr list-images --repository-name ${NAME} --output json)
+    COMMIT_ID=$(git log --pretty=format:%H -1 . )
+    IMAGES_TEST_COMMIT_ID=$(echo $IMAGES | jq '.imageIds[] | .imageTag | select (.!=null) | test("$COMMIT_ID")')
+    if [[ ! ${IMAGES_TEST_COMMIT_ID} == *true* ]]; then
+      echo "Build and Push to ECR"
+    fi
+  description: |
+    Checks if the last commit hash is present as a tag for Docker Images in a
+    particular ECR repository.
+  tags: devops ecr aws docker git
