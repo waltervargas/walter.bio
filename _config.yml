@@ -1,21 +1,34 @@
 title: walter.bio
 email: waltervargas@gmail.com
+author:
+  twitter: walterbio
+twitter:
+  username: walterbio
+url: "http://walter.bio"
 description: |
+  Sharing my experiences in the form of gists, commands, posts, and pictures of
+  a set of topics including and not limited to DevOps, AWS, Cloud, Docker,
+  Ansible, Programming, Jenkins, Bitcoin, Politics, Technology, Philosophy.
+
   Walter Vargas is a Cloud Engineer with more than 15 years of experience
   working as a consultant, developer and leader.
+
 owner: Walter Vargas
 baseurl: ""
-url: "http://walter.bio"
+
 social:
   twitter: https://twitter.com/walterbio
   instagram: https://www.instagram.com/waltervargas/
+
 disqus:
   shortname: walterbio
 markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
 google_analytics: UA-100878334-1
+
