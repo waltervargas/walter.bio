@@ -1,0 +1,32 @@
+<div id="hero-post">
+        <div class="hero hero-profile">
+            <div class="hero-avatar-post float-left relative">
+                <div class="avatar">
+                    <a href="{{ '/' | relative_url }}">
+                    <img src="https://avatars1.githubusercontent.com/u/74988?v=3&s=460"
+                         class="avatar-image-post"
+                         alt="Walter Vargas"
+                    />
+                    </a>
+                </div>
+            </div>
+            <a class="site-title" href="{{ "/" | relative_url }}">
+                <div class="hero-title-post">
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        <span itemprop="name">
+                            {{ site.author.name | escape }}
+                        </span>
+                    </span>
+                    <div class="post-time">
+                        <time datetime="{{ include.page.date | date_to_xmlschema }}" itemprop="datePublished">
+                            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                            {{ include.page.date | date: date_format }}
+                        </time>
+                    </div>
+                </div>
+            </a>
+            <br />
+
+        </div>
+
+</div>

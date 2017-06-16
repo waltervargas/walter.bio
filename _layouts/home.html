@@ -3,41 +3,22 @@ layout: default
 ---
 
 <div class="home">
-  <h1 class="page-heading">Gists</h1>
-  <ul class="post-list">
-    {% for gi in site.data.gists %}
-      <li>
-        <span class="post-meta">{{ gi.description }}</span>
-        {% gist gi.gist %}
-      </li>
-    {% endfor %}
-  </ul>
-
-  <h1 class="page-heading">Commands</h1>
-  <ul class="post-list">
-    {% for command in site.data.commands %}
-      <li>
-        <span class="post-meta">{{ command.description }}</span>
-        {% highlight sh %}{{ command.command }}{% endhighlight %}
-      </li>
-    {% endfor %}
-  </ul>
-
-  <h1 class="page-heading">Posts</h1>
   {{ content }}
 
-  <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
+          <div class="post-card">
+              {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+              <span class="post-meta">{{ post.date | date: date_format }}</span>
+              <h2>
+                  <a class="post-link post-link-short" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              </h2>
+              <div class="post-excerpt">
+                  {{ post.excerpt }}
+              </div>
+              <a class="read-more" href="{{ post.url | relative_url }}">Read more...</a>
+          </div>
     {% endfor %}
-  </ul>
+
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
