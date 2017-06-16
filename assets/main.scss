@@ -1,0 +1,101 @@
+---
+---
+$content-width:    700px !default;
+$on-palm:          320px !default;
+$on-laptop:        700px !default;
+$brand-color:      #000;
+
+@import "{{ site.theme }}";
+@import "hero.scss";
+
+.site-header {
+    background-color: white;
+}
+
+.container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.relative {
+    position: relative!important;
+}
+
+.float-right {
+    float: right!important ;
+}
+
+.float-left {
+    float: left!important ;
+}
+
+
+.post-card {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid rgba(0,0,0,.09);
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.post-link {
+    --x-height-multiplier: 0.363;
+    --baseline-multiplier: 0.157;
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+    letter-spacing: -.02em;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    margin-left: -2.5px;
+    line-height: 1.04;
+    letter-spacing: -.028em;
+}
+
+.post-link-short {
+    color: #000;
+    font-size: 24px;
+    letter-spacing: -.028em;
+    line-height: 1.04;
+}
+
+.post-time {
+    font-size: 14px;
+}
+
+.read-more {
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    color: rgba(0,0,0,.4);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: none;
+    }
+
+    .social-media-list &:hover {
+        text-decoration: none;
+
+        .username {
+            text-decoration: underline;
+        }
+    }
+}
