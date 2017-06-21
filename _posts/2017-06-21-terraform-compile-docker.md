@@ -41,6 +41,7 @@ Terraform v0.10.0
 
 - [Hashicorp Terraform GitHub Repository][terraform-repo]
 - [Golang Docker Image][golang-docker]
+- [Use Terraform from Docker Images by @lgallard][tfdocker]
 
 ## Questions
 
@@ -48,3 +49,4 @@ If you have questions, you can ask me on this post as a Disqus comment.
 
 [terraform-repo]: https://github.com/hashicorp/terraform
 [golang-docker]: https://hub.docker.com/_/golang/
+[tfdocker]: https://github.com/lgallard/tfdocker/blob/master/tfdocker
