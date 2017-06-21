@@ -6,9 +6,12 @@ layout: default
     <ul class="post-list">
         {% for gi in site.data.gists %}
         <li>
+            <h3 id="{{ gi.name }}">{% include octicon.html gist=gi %} {{ gi.name }}</h3>
             <span class="post-meta">{{ gi.description }}</span>
             {% gist gi.gist %}
         </li>
         {% endfor %}
     </ul>
 </div>
+
+

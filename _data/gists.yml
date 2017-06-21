@@ -1,5 +1,16 @@
 ---
 
+- name: compile-terraform.sh
+  gist: waltervargas/29b3e9b9638bc6ac3b13cdb8261fee27
+  body: |
+    git clone git@github.com:hashicorp/terraform.git
+    cd terraform
+    docker run --rm -v $(pwd):/go/src/github.com/hashicorp/terraform -w /go/src/github.com/hashicorp/terraform -e XC_OS=linux -e XC_ARCH=amd64 golang:latest bash -c "apt-get update && apt-get install -y zip && make bin"
+    bin/terraform -v
+  description: |
+    Compile Hashicorp Terraform using Docker
+  tags: iac provisioning terraform docker
+
 - name: ecr_image_commit_id_check.sh
   gist: waltervargas/46e312c3809805409acda5596b9341b8
   body: |
