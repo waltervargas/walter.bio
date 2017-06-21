@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Compile Hashicorp Terraform with Docker"
+title:  "How to Compile Hashicorp Terraform using Docker"
 date:   2017-06-21 13:40:02 -0400
 categories: iac provisioning hashicorp terraform
 comments: true
