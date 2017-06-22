@@ -1,5 +1,18 @@
 ---
 
+- name: install-go1.8.3.sh
+  gist: waltervargas/a4baff8e929a9d031ee4e9fcb92bcee2
+  body: |
+    cd $HOME 
+    wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
+    tar -zxvf go1.8.3.linux-amd64.tar.gz
+    mv go go1.8.3
+    ln -s go1.8.3 go
+    echo "Done. You need to add $HOME/go/bin to $PATH"
+  description: |
+    Installs go version 1.8.3 in your $HOME directory
+  tags: programming go
+
 - name: compile-terraform.sh
   gist: waltervargas/29b3e9b9638bc6ac3b13cdb8261fee27
   body: |
