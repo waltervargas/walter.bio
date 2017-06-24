@@ -4,6 +4,7 @@ title:  "How to Compile Hashicorp Terraform using Docker"
 date:   2017-06-21 13:40:02 -0400
 categories: iac provisioning hashicorp terraform
 comments: true
+crosspost_to_medium: true
 ---
 
 I am going to show you the way to compile Terraform by Hashicorp from source
