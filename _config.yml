@@ -20,13 +20,16 @@ social:
 
 disqus:
   shortname: walterbio
+
 markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-crosspost-to-medium
+
 exclude:
   - Gemfile
   - Gemfile.lock
-google_analytics: UA-100878334-1
 
+google_analytics: UA-100878334-1
