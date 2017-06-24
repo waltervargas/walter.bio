@@ -1,5 +1,6 @@
 language: ruby
 cache: bundler
+rvm: 2.3.1
 
 before_install:
 - cp _config.yml _config.yml.backup
