@@ -8,7 +8,7 @@ crosspost_to_medium: true
 ---
 
 I am going to show you the way to compile Terraform by Hashicorp from source
-code using docker. By using Docker, we save time since we do not need to install
+code using Docker. By using Docker, we save time since we do not need to install
 golang and we don't have to setup the development environment. So save time and
 hit the hay.
 
