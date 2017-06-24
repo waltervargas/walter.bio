@@ -12,7 +12,7 @@ code using Docker. By using Docker, we save time since we do not need to install
 golang and we don't have to setup the development environment. So save time and
 hit the hay.
 
-In some cases you will need to use terraform from `master` branch or test a
+In some cases you will need to use Terraform from `master` branch or test a
 feature under development, Whether you are collaborating with the project, or
 just requiring a fix or feature that is in a pull request.
 
