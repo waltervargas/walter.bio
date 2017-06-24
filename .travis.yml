@@ -1,9 +1,19 @@
 language: ruby
 cache: bundler
+
+before_install:
+- cp _config.yml _config.yml.backup
+- cat _medium.yml >> _config.yml
+
 install:
 - bundle install
+
 script:
 - bundle exec jekyll build
+
+after_success:
+- mv _config.yml.backup _config.yml
+
 env:
   global:
   - secure: D32UaJoGCljP1FtorzylJrlDrYyaRZcgzZTGUf1wQHscwCT2tqzIO+l6GCJPCGAbcjMcg0dC/xcBl+EBZ8YyWQzH7nSBZ/ffCIYjK16cTSvWLM01WvIzbMRQqF1RXVoY4jfYiWQGYEMxKsKlPlWn6kFStSWC1r4bE86C0VuOPflrVMofgfbWZixy4qQhX+2GValJH5PwHYeq9xSg2AEI+vGCshlNMgETHZT2OpDbG0RwwP1HL15EpKvtX0CjIqYBqjwQcMRzBlcyT8gTVJ3Vz87apUSSPUFZ8KICn8h31xEf1TgILsaMv+5p0CZoqAGdoRqpfCx+ek1F1d+RbHYl5/dPgBs9VGuRi9XOUmIUfa51cTgmMhhFjxg2GPmBYh38qYB+aZvZmJPuPlEh5FTfgW1iDQwaErP7Vp4h2dX6VgWtzJLwUsC9Z/0whXW80m14gyWIDevkX8O7sTeHoVHAht8gKvogcpPbTrxjztmzn3VVHZfq/NTXJ3Z2MGG/F6N8JpRCqpVt1+tj2VI2ruEFRaHy5FehB3+OT0OT8Wps4GZddXYthwxM2TPo83yOJdvd8wGyRH5sU72WDM3nI/Xe6jrgJZHZMB4cx/0QTDZ5dGr1UOuJfmfxmaJb924oy6enw6ndMcGd+kCYSmFC0aowpA9gaEVabY0gS+iXxH+oifo=
