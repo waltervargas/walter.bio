@@ -22,7 +22,10 @@ disqus:
   shortname: walterbio
 
 markdown: kramdown
+highlighter: rouge
+
 theme: minima
+
 gems:
   - jekyll-feed
   - jekyll-seo-tag

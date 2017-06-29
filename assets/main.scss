@@ -4,9 +4,11 @@ $content-width:    700px !default;
 $on-palm:          320px !default;
 $on-laptop:        700px !default;
 $brand-color:      #000;
+$code-background-color: white;
 
 @import "{{ site.theme }}";
 @import "hero.scss";
+@import "code.scss";
 
 .site-header {
     background-color: white;
