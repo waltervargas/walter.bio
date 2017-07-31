@@ -14,19 +14,24 @@
                   <h1 class="hero-title">{{ site.author.name | escape }}</h1>
               </a>
             </div>
-                <div id="contact-list">
-                    {% if site.author.github %}
-                    <a href="https://github.com/{{ site.author.github }}">
-                            <i class="fa fa-github"></i>
-                    </a>
-                    {% endif %}
+            <div id="contact-list">
+                {% if site.author.linkedin %}
+                <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                {% endif %}
+                {% if site.author.github %}
+                <a href="https://github.com/{{ site.author.github }}">
+                    <i class="fa fa-github"></i>
+                </a>
+                {% endif %}
 
-                    {% if site.author.twitter %}
-                    <a href="https://twitter.com/{{ site.author.twitter }}">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    {% endif %}
-                </div>
+                {% if site.author.twitter %}
+                <a href="https://twitter.com/{{ site.author.twitter }}">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                {% endif %}
+            </div>
 
         </div>
     </div>
