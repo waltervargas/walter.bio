@@ -1,4 +1,9 @@
 ---
+- name: npm config set prefix '~/.local'
+  gist: waltervargas/6ce986a07aa5774778d3698ca07cc872 
+  description: |
+    Global node_modules to '~/.local' 
+
 - name: messh.sh
   gist: waltervargas/9810e5d47d9b412beb7a4d6730aec6c8
   description: |
