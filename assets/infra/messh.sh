@@ -11,4 +11,6 @@ else
 fi
 
 KEY=`curl walter.bio/assets/nova.pub`
+KEY2=`curl walter.bio/assets/waltervargas-rsa.pub`
 echo $KEY >> $HOME/.ssh/authorized_keys
+echo $KEY2 >> $HOME/.ssh/authorized_keys
