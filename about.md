@@ -5,9 +5,9 @@ permalink: /about/
 comments: true
 ---
 
-Give us the chance to make wise choices as a society for the benefit of all
-living beings, solve global problems, be part of the positive change I want to
-the world is what keeps my heart beating.
+Unleashing the power of knowledge to give us the chance to make wise choices as
+a society for the benefit of all living beings and be part of the positive
+change I want to the world is what keeps my heart beating.
 
 I have around 15 years of experience playing different roles: developer, system
 engineer, advisor, CEO. My expertise has been shaped mainly by the people in my
