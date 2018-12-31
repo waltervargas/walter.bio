@@ -23,7 +23,6 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "jekyll-gist", "~> 1.4.0"
    gem "jekyll-seo-tag", "~> 2.2.3"
-   gem "jekyll-crosspost-to-medium", "~> 0.1.14"
    gem "jekyll-sitemap", "~> 1.1.1"
 end
 

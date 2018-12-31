@@ -1,6 +1,6 @@
-jekyll-crosspost_to_medium:
-  enabled: true
-  cache: .jekyll-crosspost_to_medium
-  status: public
-  license: public-domain
-  backdate: true
+# jekyll-crosspost_to_medium:
+#   enabled: false
+#   cache: .jekyll-crosspost_to_medium
+#   status: public
+#   license: public-domain
+#   backdate: true

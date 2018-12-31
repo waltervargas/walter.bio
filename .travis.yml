@@ -4,7 +4,7 @@ rvm: 2.3.1
 
 before_install:
 - cp _config.yml _config.yml.backup
-- cat _medium.yml >> _config.yml
+#- cat _medium.yml >> _config.yml
 
 install:
 - bundle install
