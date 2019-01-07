@@ -1,4 +1,4 @@
-# Systemd-sleep hacks
+# Hacks
 
 ## `systemd-sleep-wifi-on-off.sh`
 
