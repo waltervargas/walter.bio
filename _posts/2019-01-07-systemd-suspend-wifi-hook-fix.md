@@ -1,29 +1,37 @@
 ---
 layout: post
-title:  "Hacks"
+title:  "Systemd Suspend Hook to Fix WiFi"
 date:   2017-06-28 22:14:15 -0400
-categories: hacks linux
+categories: hacks linux systemd suspend wifi archlinux
 comments: true
 crosspost_to_medium: false
 ---
 
-# Systemd Suspend Hook
-
 My macbook running Arch Linux is currently having problems with the WiFi after
 resume from suspend.
 
-After doing a quick read over `man systemd-suspend.service` the following script brings to life.
+Systemd provides a mechanism to run executable files before and after suspend or hibernation.
+`/usr/lib/systemd/system-sleep`
 
-## `systemd-sleep-wifi-on-off.sh`
+This mechanism relies on the system service `systemd-suspend.service`, this
+service will run all executable files in `/usr/lib/systemd/system-sleep/`.
 
-## Setup
+Two arguments are going to be passed to the script, before suspend the execution
+will look to something like:
 
- 1. Copy or symlink the script into `/usr/lib/systemd/system-sleep`
- 1. Set the corresponding permissions to execute the file `systemd-sleep-wifi-on-off`
+```sh
+/usr/lib/systemd/system-sleep/wifi-hook.sh "pre" "suspend"
+```
 
-## Script
+After suspend, the execution will be:
 
-[systemd-sleep-wifi-on-off.sh](./systemd-sleep-wifi-on-off.sh)
+```sh
+/usr/lib/systemd/system-sleep/wifi-hook.sh "post" "suspend"
+```
+
+Is up to you the implementation details, I just wrote a quick hackish bash
+script:
+
 
 ```sh
 #!/bin/sh
@@ -83,3 +91,10 @@ main () {
 
 main "$@"
 ```
+
+This scripts are intented for local use and hacks, if you want to react to
+system suspend/hibernation and resume from applications you should use
+[Inhibitor
+interface](https://www.freedesktop.org/wiki/Software/systemd/inhibit/).
+
+Please drop a portion of love in form of comments if this post has been helpful :)
